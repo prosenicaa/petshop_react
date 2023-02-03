@@ -60,3 +60,38 @@
     }
   }
   
+  #light {
+    background-color: #f3ebf6;
+  }
+  
+  #dark {
+    background-color: #684e34;
+  }
+  
+  #light .shopItem {
+    background-color: #fff;
+  }
+  
+  #dark .shopItem {
+    background-color: #c0a387;
+  }
+  
+  .switch {
+    display: flex;
+    width: 200px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .switch label {
+    margin: 10px;
+  }
+  
+  #light .switch label {
+    color: black;
+  }
+  
+  #dark .switch label {
+    color: white;
+  }
