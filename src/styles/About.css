@@ -5,15 +5,6 @@
     flex-direction: column;
   }
   
-  .aboutTop {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  }
-  
   .aboutBottom {
     display: flex;
     flex-direction: column;
@@ -28,11 +19,41 @@
   
   .about .aboutBottom h1 {
     font-weight: 400;
-    font-size: 70px;
+    font-size: 50px;
     color: black;
-    height: 30px;
+    height: 5px;
     display: flex;
     justify-content: center;
     transform: translateY(-40px);
   }
+
+  .section {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: var(--max-width);
+  }
   
+  @media screen and (min-width: 992px) {
+    .section {
+      width: 95vw;
+    }
+  }
+  
+  .container {
+    width: 90vw;
+    margin: auto;
+    background: var(--clr-white);
+    border-radius: var(--radius);
+    padding: 2px;
+    max-width: var(--fixed-width);
+    display: grid;
+    gap: 1rem 2rem;
+  }
+  
+  
+  @media screen and (min-width: 992px) {
+    .container {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+    }
+  }

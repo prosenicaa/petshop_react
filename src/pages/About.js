@@ -1,13 +1,12 @@
 import React from "react";
 import Cover from "../img/cover2.jpg";
 import "../styles/About.css";
+import facts from "../data/facts";
+import FunFact from "../components/Fact";
+
 function About() {
   return (
     <div className="about">
-      <div
-        className="aboutTop"
-        style={{ backgroundImage: `url(${Cover})` }}
-      ></div>
       <div className="aboutBottom">
         <h1> ABOUT US</h1>
         <p>
@@ -19,12 +18,15 @@ function About() {
           and stress-relieving companions the best way we could think of; by
           providing the utmost quality of products for their everyday needs.
           Ranging from a wide variety of pet foods and treats all the way to pet
-          accessories and pet grooming. From our physical store to our online
-          e-store (petshop.com), we take pride in the exclusive collections that
-          top-tier pet products bring to the market and the incomparable
-          customer service we provide to our clients every day. Shopping for all
-          your pet care needs made easy with just a few clicks!
+          accessories and pet grooming.
         </p>
+        <div className="container">
+          <section className="info">
+            {facts.map((fact) => {
+              return <FunFact key={fact.id} {...fact} />;
+            })}
+          </section>
+        </div>
       </div>
     </div>
   );
