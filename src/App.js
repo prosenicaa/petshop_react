@@ -6,17 +6,33 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useState } from "react";
 
 function App() {
+  const [currentPage, setCurrentPage] = useState(true);
+
+  function changePageName(vrednost) {
+    setCurrentPage(vrednost);
+  }
+
   return (
     <div className="App">
       <Router>
-        <Navbar />
+        <Navbar currentPage={currentPage} />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={<Home changePageName={changePageName} />} />
+          <Route
+            path="/shop"
+            element={<Shop changePageName={changePageName} />}
+          />
+          <Route
+            path="/about"
+            element={<About changePageName={changePageName} />}
+          />
+          <Route
+            path="/contact"
+            element={<Contact changePageName={changePageName} />}
+          />
         </Routes>
         <Footer />
       </Router>

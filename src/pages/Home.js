@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import Background from "../img/background3.jpg";
 import "../styles/Home.css";
 
-function Home() {
+function Home({ changePageName }) {
+  changePageName(true);
+
   return (
     <div className="home" style={{ backgroundImage: `url(${Background})` }}>
       <div className="headerContainer">

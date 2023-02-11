@@ -7,12 +7,15 @@ import ReactSwitch from "react-switch";
 
 export const ThemeContext = createContext(null);
 
-function Shop() {
+function Shop({ changePageName }) {
   const [theme, setTheme] = useState("dark");
 
   const toggleTheme = () => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
   };
+
+  changePageName(false);
+
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className="shop" id={theme}>

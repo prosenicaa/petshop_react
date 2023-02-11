@@ -4,7 +4,9 @@ import "../styles/About.css";
 import facts from "../data/facts";
 import FunFact from "../components/Fact";
 
-function About() {
+function About({ changePageName }) {
+  changePageName(true);
+
   return (
     <div className="about">
       <div className="aboutBottom">
