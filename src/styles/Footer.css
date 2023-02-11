@@ -21,4 +21,8 @@
   .footer p {
     color: white;
   }
+
+  .socialMedia{
+    display: flex;
+  }
   
